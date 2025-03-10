@@ -1,5 +1,7 @@
 package task4
 
+import task4.Exercise9.Expr.{Add, Literal, show}
+
 object Exercise9 extends App:
 
   enum Expr:
@@ -16,3 +18,4 @@ object Exercise9 extends App:
 
     def show(expr: Expr): String = expr match
       case Literal(i) => "" + i
+      case Add(a, b) => "(" + show(a) + " + " + show(b) + ")"
