@@ -32,3 +32,8 @@ class testTask4:
     val literal = Literal(5)
     assertEquals("5", show(literal))
   }
+
+  @Test def testShowAdd(): Unit = {
+    val add = Add(Add(Literal(4), Literal(3)),Literal(3))
+    assertEquals("((4 + 3) + 3)", show(add))
+  }
