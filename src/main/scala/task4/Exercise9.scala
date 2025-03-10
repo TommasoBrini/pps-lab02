@@ -13,3 +13,6 @@ object Exercise9 extends App:
       case Literal(i) => i
       case Add(a, b) => evaluate(a) + evaluate(b)
       case Multiply(a, b) => evaluate(a) * evaluate(b)
+
+    def show(expr: Expr): String = expr match
+      case Literal(i) => "" + i
