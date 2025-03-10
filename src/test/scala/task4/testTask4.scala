@@ -15,6 +15,6 @@ class testTask4:
 
   @Test def testEvaluateAdd(): Unit = {
     val add = Expr.Add(3,4)
-    assertEquals(evaluate(add, 7))
+    assertEquals(evaluate(add), 7)
 
   }
