@@ -40,5 +40,10 @@ class testTask4:
 
   @Test def testShowMultiply(): Unit = {
     val multiply = Multiply(Multiply(Literal(2), Literal(5)), Literal(4))
-    assertEquals("(2 * 5) * 4", show(multiply))
+    assertEquals("((2 * 5) * 4)", show(multiply))
+  }
+
+  @Test def testShowCombined(): Unit = {
+    val result = Multiply(Add(Literal(4), Literal(6)), Literal(4))
+    assertEquals("((4 + 6) * 4)", show(result))
   }

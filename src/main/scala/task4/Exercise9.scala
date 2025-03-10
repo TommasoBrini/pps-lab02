@@ -19,3 +19,4 @@ object Exercise9 extends App:
     def show(expr: Expr): String = expr match
       case Literal(i) => "" + i
       case Add(a, b) => "(" + show(a) + " + " + show(b) + ")"
+      case Multiply(a, b) => "(" + show(a) + " * " + show(b) + ")"
